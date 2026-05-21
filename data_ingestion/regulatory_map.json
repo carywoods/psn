@@ -1,0 +1,177 @@
+{
+    "DRS2": {
+        "systematic_id": "YAL026C",
+        "reactions": [
+            "r_3886",
+            "r_3826",
+            "r_3822",
+            "r_3885",
+            "r_3887",
+            "r_3889",
+            "r_3825",
+            "r_3827",
+            "r_3891",
+            "r_3823",
+            "r_3824",
+            "r_3888",
+            "r_3892",
+            "r_3828",
+            "r_3821",
+            "r_3890"
+        ]
+    },
+    "ETR1": {
+        "systematic_id": "YBR026C",
+        "reactions": [
+            "r_2151",
+            "r_2153",
+            "r_2152"
+        ]
+    },
+    "GDH2": {
+        "systematic_id": "YDL215C",
+        "reactions": [
+            "r_0470"
+        ]
+    },
+    "FOX2": {
+        "systematic_id": "YKR009C",
+        "reactions": [
+            "r_2266",
+            "r_2273",
+            "r_2281",
+            "r_2277",
+            "r_2257",
+            "r_2263",
+            "r_2250",
+            "r_2254",
+            "r_2270",
+            "r_2259",
+            "r_2282",
+            "r_2267",
+            "r_2274",
+            "r_2278",
+            "r_2251",
+            "r_0057",
+            "r_2271",
+            "r_2260",
+            "r_2275",
+            "r_2279",
+            "r_2256",
+            "r_2264",
+            "r_2265",
+            "r_2255",
+            "r_2268",
+            "r_2252",
+            "r_2258",
+            "r_2272",
+            "r_2280",
+            "r_2276",
+            "r_2262",
+            "r_2248",
+            "r_2249",
+            "r_2261",
+            "r_2269",
+            "r_2253"
+        ]
+    },
+    "MEP3": {
+        "systematic_id": "YPR138C",
+        "reactions": [
+            "r_1115"
+        ]
+    },
+    "HMT1": {
+        "systematic_id": "YBR034C",
+        "reactions": [
+            "r_0541"
+        ]
+    },
+    "SET2": {
+        "systematic_id": "YJL168C",
+        "reactions": [
+            "r_4193"
+        ]
+    },
+    "YML082W": {
+        "systematic_id": "YML082W",
+        "reactions": [
+            "r_4484",
+            "r_0815",
+            "r_4274"
+        ]
+    },
+    "PDC5": {
+        "systematic_id": "YLR134W",
+        "reactions": [
+            "r_4669",
+            "r_0064",
+            "r_0567",
+            "r_0960",
+            "r_0062",
+            "r_0959",
+            "r_4651",
+            "r_0095"
+        ]
+    },
+    "PDC6": {
+        "systematic_id": "YGR087C",
+        "reactions": [
+            "r_4669",
+            "r_0064",
+            "r_0567",
+            "r_0960",
+            "r_0062",
+            "r_0959",
+            "r_4651",
+            "r_0095"
+        ]
+    },
+    "THI21": {
+        "systematic_id": "YPL258C",
+        "reactions": [
+            "r_0561",
+            "r_0903"
+        ]
+    },
+    "ERG27": {
+        "systematic_id": "YLR100W",
+        "reactions": [
+            "r_0236",
+            "r_0237"
+        ]
+    },
+    "AAH1": {
+        "systematic_id": "YNL141W",
+        "reactions": [
+            "r_0328",
+            "r_0138",
+            "r_0140"
+        ]
+    },
+    "FOL2": {
+        "systematic_id": "YGR267C",
+        "reactions": [
+            "r_0524"
+        ]
+    },
+    "PFK1": {
+        "systematic_id": "YGR240C",
+        "reactions": [
+            "r_0887",
+            "r_0886"
+        ]
+    },
+    "SAH1": {
+        "systematic_id": "YER043C",
+        "reactions": [
+            "r_0144"
+        ]
+    },
+    "PFK27": {
+        "systematic_id": "YOL136C",
+        "reactions": [
+            "r_0090"
+        ]
+    }
+}

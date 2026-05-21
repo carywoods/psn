@@ -1,0 +1,200 @@
+{
+  "system_metadata": {
+    "project": "Saccharomyces-Nexus",
+    "legacy_source": "Goebl Lab IU (GLPath)",
+    "timestamp": "2026-03-24T04:45:00EST"
+  },
+  "metabolic_nodes": [
+    {
+      "gl_number": "1000100",
+      "ec_number": "2.4.2.14",
+      "enzyme_rec": "Amidophosphoribosyltransferase",
+      "enzyme_sys": "5-phosphoribosylamine:diphosphate phospho-alpha-D-ribosyltransferase (glutamate-amidating)",
+      "substrates": [
+        "5-phospho-alpha-D-ribose 1-diphosphate",
+        "H2O",
+        "L-glutamine"
+      ],
+      "products": [
+        "5-phospho-beta-D-ribosylamine",
+        "diphosphate",
+        "L-glutamate"
+      ],
+      "topology": {
+        "pre_process": "-1",
+        "post_process": "1000101"
+      }
+    },
+    {
+      "gl_number": "1000101",
+      "ec_number": "6.3.4.13",
+      "enzyme_rec": "Phosphoribosylamine-glycine ligase",
+      "enzyme_sys": "5-phospho-D-ribosylamine:glycine ligase (ADP-forming)",
+      "substrates": [
+        "ATP",
+        "5-phospho-beta-D-ribosylamine",
+        "glycine"
+      ],
+      "products": [
+        "ADP",
+        "phosphate",
+        "N1-(5-phospho-D-ribosyl)glycinamide"
+      ],
+      "topology": {
+        "pre_process": "1000100",
+        "post_process": "1000102"
+      }
+    },
+    {
+      "gl_number": "1000102",
+      "ec_number": "2.1.2.2",
+      "enzyme_rec": "Phosphoribosylglycinamide formyltransferase",
+      "enzyme_sys": "10-formyltetrahydrofolate:5'-phosphoribosylglycinamide N-formyltransferase",
+      "substrates": [
+        "10-formyltetrahydrofolate",
+        "N1-(5-phospho-D-ribosyl)glycinamide"
+      ],
+      "products": [
+        "tetrahydrofolate",
+        "N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide"
+      ],
+      "topology": {
+        "pre_process": "1000101",
+        "post_process": "1000103"
+      }
+    },
+    {
+      "gl_number": "1000103",
+      "ec_number": "6.3.5.3",
+      "enzyme_rec": "Phosphoribosylformylglycinamidine synthase",
+      "enzyme_sys": "5'-Phosphoribosylformylglycinamide:L-glutamine amido-ligase (ADP-forming)",
+      "substrates": [
+        "ATP",
+        "N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide",
+        "L-glutamine",
+        "H2O"
+      ],
+      "products": [
+        "ADP",
+        "phosphate",
+        "2-(formamido)-N1-(5-phospho-D-ribosyl)acetamidine",
+        "L-glutamate"
+      ],
+      "topology": {
+        "pre_process": "1000102",
+        "post_process": "1000104"
+      }
+    },
+    {
+      "gl_number": "1000104",
+      "ec_number": "6.3.3.1",
+      "enzyme_rec": "Phosphoribosylformylglycinamidine cyclo-ligase",
+      "enzyme_sys": "2-(Formamido)-N1-(5-phosphoribosyl)acetamidine cyclo-ligase (ADP-forming)",
+      "substrates": [
+        "ATP",
+        "2-(formamido)-N1-(5-phospho-D-ribosyl)acetamidine"
+      ],
+      "products": [
+        "ADP",
+        "phosphate",
+        "5-amino-1-(5-phospho-D-ribosyl)imidazole"
+      ],
+      "topology": {
+        "pre_process": "1000103",
+        "post_process": "1000105"
+      }
+    },
+    {
+      "gl_number": "1000105",
+      "ec_number": "4.1.1.21",
+      "enzyme_rec": "Phosphoribosylaminoimidazole carboxylase",
+      "enzyme_sys": "1-(5-Phosphoribosyl)-5-amino-4-imidazolecarboxylate carboxy-lyase",
+      "substrates": [
+        "5-amino-1-(5-phospho-D-ribosyl)imidazole",
+        "CO2",
+        "ATP"
+      ],
+      "products": [
+        "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate",
+        "ADP",
+        "phosphate"
+      ],
+      "topology": {
+        "pre_process": "1000104",
+        "post_process": "1000106"
+      }
+    },
+    {
+      "gl_number": "1000106",
+      "ec_number": "6.3.2.6",
+      "enzyme_rec": "Phosphoribosylaminoimidazolesuccinocarboxamide synthase",
+      "enzyme_sys": "1-(5-Phosphoribosyl)-5-amino-4-carboxyimidazole:L-aspartate ligase (ADP-forming)",
+      "substrates": [
+        "ATP",
+        "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate",
+        "L-aspartate"
+      ],
+      "products": [
+        "ADP",
+        "phosphate",
+        "(S)-2-[5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate"
+      ],
+      "topology": {
+        "pre_process": "1000105",
+        "post_process": "1000107"
+      }
+    },
+    {
+      "gl_number": "1000107",
+      "ec_number": "4.3.2.2",
+      "enzyme_rec": "Adenylosuccinate lyase",
+      "enzyme_sys": "N6-(1,2-dicarboxyethyl)AMP AMP-lyase",
+      "substrates": [
+        "(S)-2-[5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate"
+      ],
+      "products": [
+        "fumarate",
+        "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide"
+      ],
+      "topology": {
+        "pre_process": "1000106",
+        "post_process": "1000108"
+      }
+    },
+    {
+      "gl_number": "1000108",
+      "ec_number": "2.1.2.3",
+      "enzyme_rec": "Phosphoribosylaminoimidazolecarboxamide formyltransferase",
+      "enzyme_sys": "10-formyltetrahydrofolate:5'-phosphoribosyl-5-amino-4-imidazole-carboxamide N-formyltransferase",
+      "substrates": [
+        "10-formyltetrahydrofolate",
+        "5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide"
+      ],
+      "products": [
+        "tetrahydrofolate",
+        "5-formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide"
+      ],
+      "topology": {
+        "pre_process": "1000107",
+        "post_process": "1000109"
+      }
+    },
+    {
+      "gl_number": "1000109",
+      "ec_number": "3.5.4.10",
+      "enzyme_rec": "IMP cyclohydrolase",
+      "enzyme_sys": "IMP 1,2-hydrolase (decyclizing)",
+      "substrates": [
+        "5-formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide"
+      ],
+      "products": [
+        "IMP",
+        "H2O"
+      ],
+      "topology": {
+        "pre_process": "1000108",
+        "post_process": "1000110"
+      }
+    }
+  ]
+}

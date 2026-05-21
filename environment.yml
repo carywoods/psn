@@ -1,0 +1,19 @@
+name: psn-engine
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - cobra        # Metabolic modeling
+  - libsbml      # SBML file support
+  - swiglpk      # GLPK solver for FBA
+  - requests     # For the Open WebUI Bridge
+  - pip:
+    - python-dotenv
+    - ollama

@@ -1,0 +1,60 @@
+# PSN API Systemd Service
+#
+# Installation:
+#   1. Copy this file to /etc/systemd/system/psn-api.service
+#      sudo cp api/psn-api.service /etc/systemd/system/
+#
+#   2. Edit the file to set correct paths and user:
+#      sudo nano /etc/systemd/system/psn-api.service
+#
+#   3. Reload systemd:
+#      sudo systemctl daemon-reload
+#
+#   4. Enable and start the service:
+#      sudo systemctl enable psn-api
+#      sudo systemctl start psn-api
+#
+#   5. Check status:
+#      sudo systemctl status psn-api
+#      journalctl -u psn-api -f
+#
+# Management:
+#   sudo systemctl start psn-api
+#   sudo systemctl stop psn-api
+#   sudo systemctl restart psn-api
+#   sudo systemctl status psn-api
+
+[Unit]
+Description=PSN API - Pharma Saccharomyces-Nexus API Server
+After=network.target
+
+[Service]
+Type=simple
+User=cary
+Group=cary
+WorkingDirectory=/home/cary/code/psn
+
+# Conda environment setup
+# Option 1: Use conda run (recommended)
+ExecStart=/home/cary/anaconda3/condabin/conda run -n psn-engine uvicorn api.main:app --host 0.0.0.0 --port 8502 --workers 1
+
+# Option 2: Direct path to python in conda env (alternative)
+# ExecStart=/home/cary/anaconda3/envs/psn-engine/bin/uvicorn api.main:app --host 0.0.0.0 --port 8502 --workers 1
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Environment variables
+Environment="PATH=/home/cary/anaconda3/envs/psn-engine/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
+
+# Logging
+StandardOutput=append:/home/cary/code/psn/logs/api_stdout.log
+StandardError=append:/home/cary/code/psn/logs/api_stderr.log
+
+# Resource limits
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

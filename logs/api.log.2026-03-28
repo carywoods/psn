@@ -1,0 +1,156 @@
+2026-03-28 08:50:08,216 - api.main - INFO - ============================================================
+2026-03-28 08:50:08,216 - api.main - INFO - PSN API Starting...
+2026-03-28 08:50:08,216 - api.main - INFO - API Version: 1.0.0
+2026-03-28 08:50:08,216 - api.main - INFO - Model Version: Yeast-GEM v9.0.2
+2026-03-28 08:50:08,216 - api.main - INFO - Initializing API keys database...
+2026-03-28 08:50:08,234 - api.auth - INFO - API keys database initialized at /home/cary/code/psn/api/data/api_keys.db
+2026-03-28 08:50:08,235 - api.main - INFO - Loading COBRA model from /home/cary/code/psn/sim_engine/yeast9.xml...
+2026-03-28 08:50:09,002 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:50:10,059 - api.main - INFO - Model loaded successfully in 1.82s
+2026-03-28 08:50:10,059 - api.main - INFO -   - Reactions: 4131
+2026-03-28 08:50:10,060 - api.main - INFO -   - Metabolites: 2806
+2026-03-28 08:50:10,060 - api.main - INFO -   - Genes: 1161
+2026-03-28 08:50:10,060 - api.main - INFO - Initializing services...
+2026-03-28 08:50:10,060 - api.main - INFO -   - Simulation service: OK
+2026-03-28 08:50:10,063 - api.services.registry_service - INFO - Loaded 15344 substrate/product mappings
+2026-03-28 08:50:10,065 - api.services.registry_service - INFO - Loaded 2806 metabolite lookups
+2026-03-28 08:50:10,068 - api.services.registry_service - INFO - Loaded 3857 reaction lookups
+2026-03-28 08:50:10,068 - api.main - INFO -   - Registry service: OK
+2026-03-28 08:50:10,068 - api.main - INFO -   - Regulatory service: OK
+2026-03-28 08:50:10,068 - api.main - INFO - PSN API Ready!
+2026-03-28 08:50:10,068 - api.main - INFO - ============================================================
+2026-03-28 08:50:10,071 - api.main - INFO - GET /health - key=none - status=200 - time=0ms
+2026-03-28 08:50:10,071 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-03-28 08:50:10,074 - api.main - INFO - GET /health - key=none - status=200 - time=0ms
+2026-03-28 08:50:10,074 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-03-28 08:50:10,075 - api.auth - INFO - API keys database initialized at /home/cary/code/psn/api/data/api_keys.db
+2026-03-28 08:50:10,094 - api.auth - INFO - Created new pro API key: ...DnFJCwnI
+2026-03-28 08:50:10,112 - api.routers.simulate - INFO - Simulation request: glucose/aerobic, knockouts=None, goebl=True
+2026-03-28 08:50:10,113 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:50:10,967 - api.main - INFO - POST /v1/simulate - key=...DnFJCwnI - status=200 - time=872ms
+2026-03-28 08:50:10,968 - httpx - INFO - HTTP Request: POST http://testserver/v1/simulate "HTTP/1.1 200 OK"
+2026-03-28 08:50:10,986 - api.routers.simulate - INFO - Simulation request: glucose/aerobic, knockouts=[], goebl=True
+2026-03-28 08:50:10,986 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:50:11,661 - api.main - INFO - POST /v1/simulate - key=...DnFJCwnI - status=200 - time=691ms
+2026-03-28 08:50:11,661 - httpx - INFO - HTTP Request: POST http://testserver/v1/simulate "HTTP/1.1 200 OK"
+2026-03-28 08:50:11,680 - api.routers.simulate - INFO - Simulation request: glucose/aerobic, knockouts=['YDL022W'], goebl=True
+2026-03-28 08:50:11,680 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:50:12,468 - api.main - INFO - POST /v1/simulate - key=...DnFJCwnI - status=200 - time=806ms
+2026-03-28 08:50:12,469 - httpx - INFO - HTTP Request: POST http://testserver/v1/simulate "HTTP/1.1 200 OK"
+2026-03-28 08:50:12,489 - api.routers.simulate - INFO - Simulation request: glucose/aerobic, knockouts=None, goebl=False
+2026-03-28 08:50:12,489 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:50:13,278 - api.main - INFO - POST /v1/simulate - key=...DnFJCwnI - status=200 - time=808ms
+2026-03-28 08:50:13,279 - httpx - INFO - HTTP Request: POST http://testserver/v1/simulate "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,297 - api.routers.simulate - INFO - Simulation request: glucose/aerobic, knockouts=['FAKE_GENE_123'], goebl=True
+2026-03-28 08:50:13,297 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:50:13,596 - api.main - INFO - POST /v1/simulate - key=...DnFJCwnI - status=422 - time=315ms
+2026-03-28 08:50:13,596 - httpx - INFO - HTTP Request: POST http://testserver/v1/simulate "HTTP/1.1 422 Unprocessable Entity"
+2026-03-28 08:50:13,617 - api.routers.registry - INFO - Gene lookup: YDL022W
+2026-03-28 08:50:13,619 - api.main - INFO - GET /v1/registry/gene/YDL022W - key=...DnFJCwnI - status=200 - time=21ms
+2026-03-28 08:50:13,620 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/gene/YDL022W "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,638 - api.routers.registry - INFO - Gene lookup: YDL022W
+2026-03-28 08:50:13,641 - api.main - INFO - GET /v1/registry/gene/YDL022W - key=...DnFJCwnI - status=200 - time=20ms
+2026-03-28 08:50:13,642 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/gene/YDL022W "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,660 - api.routers.registry - INFO - Reaction lookup: GL 1000494
+2026-03-28 08:50:13,667 - api.main - INFO - GET /v1/registry/reaction/1000494 - key=...DnFJCwnI - status=200 - time=23ms
+2026-03-28 08:50:13,667 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/reaction/1000494 "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,687 - api.routers.registry - INFO - Registry search: 'glycolysis'
+2026-03-28 08:50:13,698 - api.main - INFO - GET /v1/registry/search - key=...DnFJCwnI - status=200 - time=29ms
+2026-03-28 08:50:13,699 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/search?q=glycolysis "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,719 - api.main - INFO - GET /v1/registry/stats - key=...DnFJCwnI - status=200 - time=18ms
+2026-03-28 08:50:13,720 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/stats "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,744 - api.routers.regulatory - INFO - Regulatory analysis: glucose_uptake=10.5
+2026-03-28 08:50:13,745 - api.main - INFO - POST /v1/regulatory/analyze - key=...DnFJCwnI - status=200 - time=21ms
+2026-03-28 08:50:13,745 - httpx - INFO - HTTP Request: POST http://testserver/v1/regulatory/analyze "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,765 - api.routers.regulatory - INFO - Regulatory comparison: high_glucose vs low_glucose
+2026-03-28 08:50:13,766 - api.main - INFO - POST /v1/regulatory/compare - key=...DnFJCwnI - status=200 - time=18ms
+2026-03-28 08:50:13,767 - httpx - INFO - HTTP Request: POST http://testserver/v1/regulatory/compare "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,769 - api.main - INFO - POST /v1/simulate - key=none - status=401 - time=0ms
+2026-03-28 08:50:13,769 - httpx - INFO - HTTP Request: POST http://testserver/v1/simulate "HTTP/1.1 401 Unauthorized"
+2026-03-28 08:50:13,771 - api.auth - INFO - API keys database initialized at /home/cary/code/psn/api/data/api_keys.db
+2026-03-28 08:50:13,788 - api.auth - INFO - Created new free API key: ...88hUL2e8
+2026-03-28 08:50:13,824 - api.main - INFO - GET /v1/registry/stats - key=...88hUL2e8 - status=200 - time=18ms
+2026-03-28 08:50:13,825 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/stats "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,845 - api.main - INFO - GET /v1/registry/stats - key=...88hUL2e8 - status=200 - time=19ms
+2026-03-28 08:50:13,846 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/stats "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,848 - api.main - INFO - GET /v1/registry/stats - key=...88hUL2e8 - status=429 - time=0ms
+2026-03-28 08:50:13,848 - httpx - INFO - HTTP Request: GET http://testserver/v1/registry/stats "HTTP/1.1 429 Too Many Requests"
+2026-03-28 08:50:13,867 - api.main - INFO - GET /v1/simulate/options - key=...DnFJCwnI - status=200 - time=16ms
+2026-03-28 08:50:13,867 - httpx - INFO - HTTP Request: GET http://testserver/v1/simulate/options "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,887 - api.main - INFO - GET /v1/regulatory/status - key=...DnFJCwnI - status=200 - time=17ms
+2026-03-28 08:50:13,887 - httpx - INFO - HTTP Request: GET http://testserver/v1/regulatory/status "HTTP/1.1 200 OK"
+2026-03-28 08:50:13,888 - api.main - INFO - PSN API Shutting down...
+2026-03-28 08:53:13,630 - api.main - INFO - ============================================================
+2026-03-28 08:53:13,630 - api.main - INFO - PSN API Starting...
+2026-03-28 08:53:13,630 - api.main - INFO - API Version: 1.0.0
+2026-03-28 08:53:13,630 - api.main - INFO - Model Version: Yeast-GEM v9.0.2
+2026-03-28 08:53:13,630 - api.main - INFO - Initializing API keys database...
+2026-03-28 08:53:13,630 - api.auth - INFO - API keys database initialized at /home/cary/code/psn/api/data/api_keys.db
+2026-03-28 08:53:13,630 - api.main - INFO - Loading COBRA model from /home/cary/code/psn/sim_engine/yeast9.xml...
+2026-03-28 08:53:14,342 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 08:53:15,360 - api.main - INFO - Model loaded successfully in 1.73s
+2026-03-28 08:53:15,361 - api.main - INFO -   - Reactions: 4131
+2026-03-28 08:53:15,361 - api.main - INFO -   - Metabolites: 2806
+2026-03-28 08:53:15,361 - api.main - INFO -   - Genes: 1161
+2026-03-28 08:53:15,361 - api.main - INFO - Initializing services...
+2026-03-28 08:53:15,361 - api.main - INFO -   - Simulation service: OK
+2026-03-28 08:53:15,364 - api.services.registry_service - INFO - Loaded 15344 substrate/product mappings
+2026-03-28 08:53:15,366 - api.services.registry_service - INFO - Loaded 2806 metabolite lookups
+2026-03-28 08:53:15,369 - api.services.registry_service - INFO - Loaded 3857 reaction lookups
+2026-03-28 08:53:15,369 - api.main - INFO -   - Registry service: OK
+2026-03-28 08:53:15,370 - api.main - INFO -   - Regulatory service: OK
+2026-03-28 08:53:15,370 - api.main - INFO - PSN API Ready!
+2026-03-28 08:53:15,370 - api.main - INFO - ============================================================
+2026-03-28 08:53:42,863 - api.main - INFO - PSN API Shutting down...
+2026-03-28 11:44:52,796 - api.main - INFO - ============================================================
+2026-03-28 11:44:52,796 - api.main - INFO - PSN API Starting...
+2026-03-28 11:44:52,796 - api.main - INFO - API Version: 1.0.0
+2026-03-28 11:44:52,796 - api.main - INFO - Model Version: Yeast-GEM v9.0.2
+2026-03-28 11:44:52,796 - api.main - INFO - Initializing API keys database...
+2026-03-28 11:44:52,796 - api.auth - INFO - API keys database initialized at /home/cary/code/psn/api/data/api_keys.db
+2026-03-28 11:44:52,797 - api.main - INFO - Loading COBRA model from /home/cary/code/psn/sim_engine/yeast9.xml...
+2026-03-28 11:44:53,508 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 11:44:54,531 - api.main - INFO - Model loaded successfully in 1.73s
+2026-03-28 11:44:54,531 - api.main - INFO -   - Reactions: 4131
+2026-03-28 11:44:54,531 - api.main - INFO -   - Metabolites: 2806
+2026-03-28 11:44:54,531 - api.main - INFO -   - Genes: 1161
+2026-03-28 11:44:54,531 - api.main - INFO - Initializing services...
+2026-03-28 11:44:54,531 - api.main - INFO -   - Simulation service: OK
+2026-03-28 11:44:54,535 - api.services.registry_service - INFO - Loaded 15344 substrate/product mappings
+2026-03-28 11:44:54,537 - api.services.registry_service - INFO - Loaded 2806 metabolite lookups
+2026-03-28 11:44:54,540 - api.services.registry_service - INFO - Loaded 3857 reaction lookups
+2026-03-28 11:44:54,540 - api.main - INFO -   - Registry service: OK
+2026-03-28 11:44:54,540 - api.main - INFO -   - Regulatory service: OK
+2026-03-28 11:44:54,540 - api.main - INFO - PSN API Ready!
+2026-03-28 11:44:54,540 - api.main - INFO - ============================================================
+2026-03-28 11:45:03,904 - api.main - INFO - GET /health - key=none - status=200 - time=0ms
+2026-03-28 11:45:03,909 - api.main - INFO - GET / - key=none - status=200 - time=0ms
+2026-03-28 11:49:30,809 - api.main - INFO - PSN API Shutting down...
+2026-03-28 20:13:02,962 - api.main - INFO - ============================================================
+2026-03-28 20:13:02,962 - api.main - INFO - PSN API Starting...
+2026-03-28 20:13:02,962 - api.main - INFO - API Version: 1.0.0
+2026-03-28 20:13:02,962 - api.main - INFO - Model Version: Yeast-GEM v9.0.2
+2026-03-28 20:13:02,962 - api.main - INFO - Initializing API keys database...
+2026-03-28 20:13:02,962 - api.auth - INFO - API keys database initialized at /home/cary/code/psn/api/data/api_keys.db
+2026-03-28 20:13:02,962 - api.main - INFO - Loading COBRA model from /home/cary/code/psn/sim_engine/yeast9.xml...
+2026-03-28 20:13:03,682 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 20:13:04,731 - api.main - INFO - Model loaded successfully in 1.77s
+2026-03-28 20:13:04,732 - api.main - INFO -   - Reactions: 4131
+2026-03-28 20:13:04,732 - api.main - INFO -   - Metabolites: 2806
+2026-03-28 20:13:04,732 - api.main - INFO -   - Genes: 1161
+2026-03-28 20:13:04,732 - api.main - INFO - Initializing services...
+2026-03-28 20:13:04,732 - api.main - INFO -   - Simulation service: OK
+2026-03-28 20:13:04,735 - api.services.registry_service - INFO - Loaded 15344 substrate/product mappings
+2026-03-28 20:13:04,737 - api.services.registry_service - INFO - Loaded 2806 metabolite lookups
+2026-03-28 20:13:04,741 - api.services.registry_service - INFO - Loaded 3857 reaction lookups
+2026-03-28 20:13:04,741 - api.main - INFO -   - Registry service: OK
+2026-03-28 20:13:04,741 - api.main - INFO -   - Regulatory service: OK
+2026-03-28 20:13:04,741 - api.main - INFO - PSN API Ready!
+2026-03-28 20:13:04,741 - api.main - INFO - ============================================================
+2026-03-28 20:13:52,847 - api.main - INFO - GET /health - key=none - status=200 - time=0ms
+2026-03-28 20:14:24,201 - api.main - INFO - GET / - key=none - status=200 - time=0ms
+2026-03-28 20:14:24,329 - api.main - INFO - GET /favicon.ico - key=none - status=404 - time=0ms
+2026-03-28 20:14:34,570 - api.main - INFO - GET /health - key=none - status=200 - time=1ms
+2026-03-28 20:15:05,807 - api.routers.simulate - INFO - Simulation request: glucose/aerobic, knockouts=None, goebl=True
+2026-03-28 20:15:05,807 - cobra.core.model - INFO - The current solver interface glpk doesn't support setting the optimality tolerance.
+2026-03-28 20:15:06,575 - api.main - INFO - POST /v1/simulate - key=...2mbvr6cs - status=200 - time=785ms
