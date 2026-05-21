@@ -107,3 +107,10 @@
   - Snapshot tests prevent accidental data changes
   - Will fail if build script is rerun with different model
   - Forces conscious review of any data regeneration
+
+
+### GLPath Simulation Run (PURINE_BOTTLENECK): 2026-05-21 10:23:05
+- **Scenario:** PURINE_BOTTLENECK
+- **Target:** GL 1000109 (IMP Step)
+- **Growth Rate:** 0.056004
+- **Hardware Utilization:** 20 threads (i9-12900HK)
